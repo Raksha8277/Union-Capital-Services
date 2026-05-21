@@ -1,25 +1,21 @@
 const express = require('express')
+const router = express.Router()
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
+
 const User = require('../models/User')
 
-const router = express.Router()
-
-// ============================
-// SIGNUP ROUTE
-// ============================
+// Signup
 router.post('/signup', async (req, res) => {
   try {
     const { name, email, password } = req.body
 
-    // Check empty fields
     if (!name || !email || !password) {
       return res.status(400).json({
-        message: 'All fields are required',
+        message: 'Please fill all fields',
       })
     }
 
-    // Check existing user
     const existingUser = await User.findOne({
       email,
     })
@@ -30,73 +26,44 @@ router.post('/signup', async (req, res) => {
       })
     }
 
-    // Hash password
-    const hashedPassword = await bcrypt.hash(
-      password,
-      10
-    )
+    const hashedPassword =
+      await bcrypt.hash(password, 10)
 
-    // Create new user
-    const newUser = await User.create({
+    const user = new User({
       name,
       email,
       password: hashedPassword,
     })
 
-    // Create token
-    const token = jwt.sign(
-      { id: newUser._id },
-      process.env.JWT_SECRET,
-      {
-        expiresIn: '7d',
-      }
-    )
+    await user.save()
 
-    // Response
     res.status(201).json({
-      success: true,
       message: 'Signup successful',
-      token,
-      user: {
-        id: newUser._id,
-        name: newUser.name,
-        email: newUser.email,
-      },
     })
   } catch (error) {
     console.log(error)
 
     res.status(500).json({
-      success: false,
       message: 'Server Error',
     })
   }
 })
 
-// ============================
-// LOGIN ROUTE
-// ============================
+// Login
 router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body
 
-    // Check empty fields
-    if (!email || !password) {
-      return res.status(400).json({
-        message: 'All fields are required',
-      })
-    }
-
-    // Find user
-    const user = await User.findOne({ email })
+    const user = await User.findOne({
+      email,
+    })
 
     if (!user) {
       return res.status(400).json({
-        message: 'Invalid Email',
+        message: 'User not found',
       })
     }
 
-    // Compare password
     const isMatch = await bcrypt.compare(
       password,
       user.password
@@ -104,11 +71,10 @@ router.post('/login', async (req, res) => {
 
     if (!isMatch) {
       return res.status(400).json({
-        message: 'Invalid Password',
+        message: 'Invalid password',
       })
     }
 
-    // Generate token
     const token = jwt.sign(
       { id: user._id },
       process.env.JWT_SECRET,
@@ -117,38 +83,10 @@ router.post('/login', async (req, res) => {
       }
     )
 
-    // Response
     res.status(200).json({
-      success: true,
-      message: 'Login Successful',
       token,
-      user: {
-        id: user._id,
-        name: user.name,
-        email: user.email,
-      },
+      message: 'Login successful',
     })
-  } catch (error) {
-    console.log(error)
-
-    res.status(500).json({
-      success: false,
-      message: 'Server Error',
-    })
-  }
-})
-
-// ============================
-// GET ALL USERS
-// ============================
-
-router.get('/users', async (req, res) => {
-  try {
-    const users = await User.find().select(
-      '-password'
-    )
-
-    res.status(200).json(users)
   } catch (error) {
     console.log(error)
 
