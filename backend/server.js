@@ -3,46 +3,29 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 require('dotenv').config()
 
-const authRoutes = require('./routes/authRoutes')
-
 const app = express()
 
-// ============================
-// MIDDLEWARE
-// ============================
-
-app.use(cors())
+app.use(
+  cors({
+    origin:
+      'https://union-capital-services.vercel.app',
+    credentials: true,
+  })
+)
 
 app.use(express.json())
 
-// ============================
-// DATABASE CONNECTION
-// ============================
-
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log('MongoDB Connected')
-  })
-  .catch((err) => {
-    console.log('MongoDB Error:', err)
-  })
+  .then(() => console.log('MongoDB Connected'))
+  .catch((err) => console.log(err))
 
-// ============================
-// ROUTES
-// ============================
-
-// Test Route
 app.get('/', (req, res) => {
-  res.send('Backend Running Successfully')
+  res.send('Backend Running')
 })
 
-// Auth Routes
+const authRoutes = require('./routes/authRoutes')
 app.use('/api/auth', authRoutes)
-
-// ============================
-// SERVER
-// ============================
 
 const PORT = process.env.PORT || 5000
 
