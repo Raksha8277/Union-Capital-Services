@@ -8,112 +8,104 @@ import {
 
 const stats = [
   {
-    number: '12K+',
-    title: 'Loans Approved',
+    title: 'Loan Services',
     description:
-      'Successfully processed business, home and MSME loans with trusted banking partners.',
-    icon: <Landmark size={38} />,
+      'Business, home and MSME loan solutions with trusted banking support.',
+    icon: <Landmark size={30} />,
   },
+
   {
-    number: '100+',
     title: 'Banking Partners',
     description:
       'Strong network with leading banks and NBFC institutions across India.',
-    icon: <ShieldCheck size={38} />,
+    icon: <ShieldCheck size={30} />,
   },
+
   {
-    number: '18K+',
-    title: 'Happy Customers',
+    title: 'Customer Support',
     description:
-      'Serving entrepreneurs, startups, salaried professionals and businesses.',
-    icon: <Users size={38} />,
+      'Helping businesses and individuals with smooth financial guidance.',
+    icon: <Users size={30} />,
   },
+
   {
-    number: '₹12000Cr+',
-    title: 'Loan Disbursal',
+    title: 'Fast Processing',
     description:
-      'Delivered reliable financial support with faster approvals and smooth processing.',
-    icon: <BadgeIndianRupee size={38} />,
+      'Quick approvals with reliable and transparent loan assistance.',
+    icon: <BadgeIndianRupee size={30} />,
   },
 ]
 
 const Stats = () => {
   return (
-    <section className='py-28 bg-gradient-to-br from-blue-950 via-blue-900 to-cyan-700 text-white overflow-hidden relative'>
+    <section className='py-14 bg-gradient-to-b from-[#071739] via-[#0b1f52] to-cyan-700 text-white relative overflow-hidden'>
 
-      {/* Background Effects */}
-      <div className='absolute top-0 right-0 w-[450px] h-[450px] bg-cyan-400/20 rounded-full blur-3xl'></div>
+      {/* Background Blur */}
+      <div className='absolute top-0 right-0 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl'></div>
 
-      <div className='absolute bottom-0 left-0 w-[350px] h-[350px] bg-blue-400/20 rounded-full blur-3xl'></div>
+      <div className='absolute bottom-0 left-0 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl'></div>
 
-      <div className='max-w-7xl mx-auto px-6 relative z-10'>
+      <div className='max-w-6xl mx-auto px-5 relative z-10'>
 
         {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='text-center mb-20'
+          transition={{ duration: 0.6 }}
+          className='text-center mb-10'
         >
 
-          <span className='bg-white/10 backdrop-blur-lg border border-white/10 px-5 py-2 rounded-full font-semibold'>
-            Company Achievements
+          <span className='bg-white/10 border border-white/10 text-cyan-300 px-4 py-2 rounded-full text-sm font-medium'>
+            Company Services
           </span>
 
-          <h2 className='text-5xl md:text-6xl font-bold mt-6 leading-tight'>
+          <h2 className='text-3xl md:text-4xl font-bold mt-5 leading-tight'>
+
             Trusted Financial
-            <span className='text-cyan-400'> Excellence</span>
+            <span className='text-cyan-300'> Solutions</span>
+
           </h2>
 
-          <p className='text-gray-200 mt-6 text-lg max-w-3xl mx-auto leading-8'>
-            Union Capital Services delivers modern financial
-            solutions with transparency, reliability and
-            customer-focused banking support across India.
+          <p className='text-gray-300 mt-4 text-sm md:text-base max-w-2xl mx-auto leading-7'>
+            Union Capital Services provides reliable banking
+            and loan support with quick processing and
+            customer-friendly financial guidance.
           </p>
 
         </motion.div>
 
-        {/* Stats Grid */}
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-10'>
+        {/* Cards */}
+        <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-5'>
 
           {stats.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.7,
+                duration: 0.5,
                 delay: index * 0.1,
               }}
               whileHover={{
-                scale: 1.05,
-                y: -8,
+                y: -5,
               }}
-              className='group bg-white/10 backdrop-blur-xl border border-white/10 rounded-[35px] p-10 text-center shadow-2xl relative overflow-hidden hover:border-cyan-400/40 transition duration-300'
+              className='bg-white/10 backdrop-blur-lg border border-white/10 rounded-3xl p-6 text-center hover:border-cyan-300/30 transition duration-300'
             >
 
-              {/* Hover Glow */}
-              <div className='absolute inset-0 bg-cyan-400/10 opacity-0 group-hover:opacity-100 transition duration-500'></div>
-
               {/* Icon */}
-              <div className='w-20 h-20 mx-auto rounded-3xl bg-cyan-400/20 text-cyan-400 flex items-center justify-center relative z-10 group-hover:bg-cyan-400 group-hover:text-blue-950 transition duration-300'>
+              <div className='w-14 h-14 mx-auto rounded-2xl bg-cyan-400/20 text-cyan-300 flex items-center justify-center'>
 
                 {item.icon}
 
               </div>
 
-              {/* Number */}
-              <h1 className='text-5xl md:text-6xl font-bold text-cyan-400 mt-8 relative z-10'>
-                {item.number}
-              </h1>
-
               {/* Title */}
-              <h3 className='mt-5 text-2xl font-semibold relative z-10'>
+              <h3 className='mt-5 text-lg font-semibold'>
                 {item.title}
               </h3>
 
               {/* Description */}
-              <p className='mt-4 text-gray-300 leading-7 relative z-10'>
+              <p className='mt-3 text-gray-300 text-sm leading-6'>
                 {item.description}
               </p>
 
@@ -124,27 +116,30 @@ const Stats = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='mt-24 bg-white/10 backdrop-blur-xl border border-white/10 rounded-[40px] p-12 md:p-16 text-center relative overflow-hidden'
+          transition={{ duration: 0.6 }}
+          className='mt-12 bg-white/10 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-10 text-center relative overflow-hidden'
         >
 
-          <div className='absolute top-0 right-0 w-80 h-80 bg-cyan-400/20 rounded-full blur-3xl'></div>
+          <div className='absolute top-0 right-0 w-60 h-60 bg-cyan-400/10 rounded-full blur-3xl'></div>
 
-          <h3 className='text-4xl md:text-5xl font-bold relative z-10'>
-            Empowering Financial Growth
-          </h3>
+          <div className='relative z-10'>
 
-          <p className='mt-6 text-gray-300 text-lg max-w-3xl mx-auto leading-8 relative z-10'>
-            We continue to build strong banking partnerships
-            and provide trusted loan solutions with faster
-            approvals and transparent financial guidance.
-          </p>
+            <h3 className='text-2xl md:text-3xl font-bold'>
+              Empowering Financial Growth
+            </h3>
 
-          <button className='mt-10 bg-cyan-400 hover:bg-cyan-300 transition px-10 py-5 rounded-2xl font-bold text-lg text-blue-950 relative z-10 shadow-xl'>
-            Explore Financial Services
-          </button>
+            <p className='mt-4 text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-7'>
+              Trusted banking partnerships and reliable
+              financial solutions for personal and business growth.
+            </p>
+
+            <button className='mt-6 bg-cyan-400 hover:bg-cyan-300 text-blue-950 px-7 py-3 rounded-xl font-semibold transition shadow-lg'>
+              Explore Services
+            </button>
+
+          </div>
 
         </motion.div>
 

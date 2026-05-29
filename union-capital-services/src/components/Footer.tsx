@@ -15,64 +15,63 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer className='bg-[#06142e] text-white pt-24 pb-8 relative overflow-hidden'>
+    <footer className='bg-gradient-to-b from-[#071739] via-[#0b1f52] to-cyan-700 text-white pt-14 pb-5 relative overflow-hidden'>
 
-      {/* Background Glow */}
-      <div className='absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 blur-3xl rounded-full'></div>
+      {/* Background Blur */}
+      <div className='absolute top-0 left-0 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl'></div>
 
-      <div className='absolute bottom-0 right-0 w-80 h-80 bg-blue-500/10 blur-3xl rounded-full'></div>
+      <div className='absolute bottom-0 right-0 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl'></div>
 
-      <div className='max-w-7xl mx-auto px-6 relative z-10'>
+      <div className='max-w-6xl mx-auto px-5 relative z-10'>
 
-        {/* Top Grid */}
-        <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-14 pb-16 border-b border-white/10'>
+        {/* Main Grid */}
+        <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-8 pb-10 border-b border-white/10'>
 
           {/* Company */}
           <div>
 
-            <h2 className='text-4xl font-bold leading-tight'>
+            <h2 className='text-2xl font-bold'>
               Union Capital
             </h2>
 
-            <p className='text-cyan-400 font-medium mt-2'>
+            <p className='text-cyan-300 text-sm mt-1'>
               Financial Services
             </p>
 
-            <p className='mt-6 text-gray-400 leading-8'>
-              Providing trusted banking and financial
-              solutions for businesses, MSMEs and
-              individuals with faster approvals and
-              transparent services.
+            <p className='mt-4 text-gray-300 text-sm leading-6'>
+              Trusted financial solutions for businesses,
+              MSMEs and individuals with quick approvals
+              and transparent services.
             </p>
 
             {/* Social */}
-            <div className='flex gap-4 mt-8'>
+            <div className='flex gap-3 mt-5'>
 
               <a
                 href='https://facebook.com'
                 target='_blank'
                 rel='noreferrer'
-                className='w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-cyan-500 transition duration-300'
+                className='w-10 h-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center hover:bg-cyan-400 hover:text-blue-950 transition'
               >
-                <FaFacebookF size={16} />
+                <FaFacebookF size={14} />
               </a>
 
               <a
                 href='https://instagram.com'
                 target='_blank'
                 rel='noreferrer'
-                className='w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-cyan-500 transition duration-300'
+                className='w-10 h-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center hover:bg-cyan-400 hover:text-blue-950 transition'
               >
-                <FaInstagram size={16} />
+                <FaInstagram size={14} />
               </a>
 
               <a
                 href='https://linkedin.com'
                 target='_blank'
                 rel='noreferrer'
-                className='w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-cyan-500 transition duration-300'
+                className='w-10 h-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center hover:bg-cyan-400 hover:text-blue-950 transition'
               >
-                <FaLinkedinIn size={16} />
+                <FaLinkedinIn size={14} />
               </a>
 
             </div>
@@ -82,11 +81,11 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
 
-            <h3 className='text-2xl font-semibold mb-8'>
+            <h3 className='text-lg font-semibold mb-5'>
               Quick Links
             </h3>
 
-            <ul className='space-y-5'>
+            <ul className='space-y-3'>
 
               {[
                 ['Home', '/'],
@@ -102,10 +101,10 @@ const Footer = () => {
 
                   <Link
                     to={path}
-                    className='flex items-center gap-3 text-gray-400 hover:text-cyan-400 transition duration-300'
+                    className='flex items-center gap-2 text-gray-300 hover:text-cyan-300 transition text-sm'
                   >
 
-                    <ArrowRight size={16} />
+                    <ArrowRight size={14} />
 
                     {name}
 
@@ -122,24 +121,24 @@ const Footer = () => {
           {/* Services */}
           <div>
 
-            <h3 className='text-2xl font-semibold mb-8'>
-              Financial Services
+            <h3 className='text-lg font-semibold mb-5'>
+              Services
             </h3>
 
-            <div className='space-y-4'>
+            <div className='space-y-3'>
 
               {[
                 'Business Loans',
                 'Home Loans',
                 'MSME Finance',
                 'Vehicle Loans',
-                'Credit Card Services',
+                'Credit Cards',
                 'Project Funding',
               ].map((service, index) => (
 
                 <div
                   key={index}
-                  className='bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-gray-300 hover:border-cyan-400/40 hover:bg-white/10 transition duration-300'
+                  className='bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-300 hover:border-cyan-300/30 transition'
                 >
                   {service}
                 </div>
@@ -153,27 +152,25 @@ const Footer = () => {
           {/* Contact */}
           <div>
 
-            <h3 className='text-2xl font-semibold mb-8'>
+            <h3 className='text-lg font-semibold mb-5'>
               Contact Info
             </h3>
 
-            <div className='space-y-7'>
+            <div className='space-y-5 text-sm'>
 
               {/* Address */}
-              <div className='flex items-start gap-4'>
+              <div className='flex items-start gap-3'>
 
-                <div className='bg-cyan-500/10 text-cyan-400 p-3 rounded-2xl'>
-                  <MapPin size={22} />
+                <div className='bg-cyan-400/10 text-cyan-300 p-2.5 rounded-xl'>
+                  <MapPin size={18} />
                 </div>
 
                 <div>
-                  <h4 className='font-semibold text-lg'>
-                    Office Address
+                  <h4 className='font-medium'>
+                    Address
                   </h4>
 
-                  <p className='text-gray-400 leading-7 mt-2'>
-                    #6, 50 Feet Road,
-                    Avalahalli Extension,
+                  <p className='text-gray-300 leading-6 mt-1'>
                     Girinagar,
                     Bangalore - 560026
                   </p>
@@ -182,49 +179,45 @@ const Footer = () => {
               </div>
 
               {/* Phone */}
-              <div className='flex items-start gap-4'>
+              <div className='flex items-start gap-3'>
 
-                <div className='bg-cyan-500/10 text-cyan-400 p-3 rounded-2xl'>
-                  <Phone size={22} />
+                <div className='bg-cyan-400/10 text-cyan-300 p-2.5 rounded-xl'>
+                  <Phone size={18} />
                 </div>
 
                 <div>
-                  <h4 className='font-semibold text-lg'>
-                    Phone Number
+                  <h4 className='font-medium'>
+                    Phone
                   </h4>
 
-                  <p className='text-gray-400 mt-2'>
+                  <p className='text-gray-300 mt-1'>
                     +91 91135 20317
                   </p>
 
-                  <p className='text-gray-400'>
+                  <p className='text-gray-300'>
                     +91 99720 69920
-                  </p>
-
-                  <p className='text-gray-400'>
-                    +91 81238 73820
                   </p>
                 </div>
 
               </div>
 
               {/* Email */}
-              <div className='flex items-start gap-4'>
+              <div className='flex items-start gap-3'>
 
-                <div className='bg-cyan-500/10 text-cyan-400 p-3 rounded-2xl'>
-                  <Mail size={22} />
+                <div className='bg-cyan-400/10 text-cyan-300 p-2.5 rounded-xl'>
+                  <Mail size={18} />
                 </div>
 
                 <div>
-                  <h4 className='font-semibold text-lg'>
-                    Email Support
+                  <h4 className='font-medium'>
+                    Email
                   </h4>
 
-                  <p className='text-gray-400 break-all mt-2'>
+                  <p className='text-gray-300 break-all mt-1'>
                     sandeshunion@gmail.com
                   </p>
 
-                  <p className='text-gray-400 break-all mt-1'>
+                  <p className='text-gray-300 break-all'>
                     abhijithshettyunion@gmail.com
                   </p>
                 </div>
@@ -238,14 +231,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className='pt-8 flex flex-col md:flex-row justify-between items-center gap-4'>
+        <div className='pt-5 flex flex-col md:flex-row justify-between items-center gap-3'>
 
-          <p className='text-gray-500 text-sm text-center'>
+          <p className='text-gray-300 text-xs text-center'>
             © 2026 Union Capital Services. All Rights Reserved.
           </p>
 
-          <p className='text-gray-600 text-sm text-center'>
-            Built with Modern Finance UI Design ✨
+          <p className='text-gray-400 text-xs text-center'>
+            Designed for modern financial services
           </p>
 
         </div>

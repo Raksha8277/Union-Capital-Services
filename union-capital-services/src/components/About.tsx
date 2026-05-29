@@ -4,130 +4,89 @@ import {
   Building2,
   Landmark,
   Users,
-  BadgeCheck,
   ShieldCheck,
-  CircleDollarSign,
   CheckCircle2,
 } from 'lucide-react'
 
 const About = () => {
   return (
-    <section className='relative py-32 bg-gradient-to-b from-white via-blue-50 to-white overflow-hidden'>
+    <section className='relative min-h-screen py-40 bg-gradient-to-br from-[#071739] via-[#0b1f52] to-cyan-700 overflow-hidden flex items-center text-white'>
 
       {/* Background Effects */}
-      <div className='absolute top-0 right-0 w-[450px] h-[450px] bg-cyan-200/30 rounded-full blur-3xl'></div>
+      <div className='absolute top-0 right-0 w-[350px] h-[350px] bg-cyan-400/20 rounded-full blur-3xl'></div>
 
-      <div className='absolute bottom-0 left-0 w-[350px] h-[350px] bg-blue-200/30 rounded-full blur-3xl'></div>
+      <div className='absolute bottom-0 left-0 w-[280px] h-[280px] bg-blue-500/20 rounded-full blur-3xl'></div>
 
-      <div className='max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center relative z-10'>
+      <div className='max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10'>
 
         {/* Left Image Section */}
         <motion.div
-          initial={{ opacity: 0, x: -80 }}
+          initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           className='relative'
         >
 
           {/* Glow */}
-          <div className='absolute inset-0 bg-cyan-400/10 rounded-[50px] blur-3xl'></div>
+          <div className='absolute inset-0 bg-cyan-400/20 rounded-[40px] blur-3xl'></div>
 
           {/* Main Image */}
           <img
             src='https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop'
             alt='Union Capital Services'
-            className='relative z-10 rounded-[40px] shadow-2xl border border-white/20'
+            className='relative z-10 rounded-[30px] shadow-2xl border border-white/10 max-h-[75vh] object-cover'
           />
-
-          {/* Floating Card 1 */}
-          <motion.div
-            whileHover={{ y: -8 }}
-            className='absolute -bottom-10 left-8 bg-white rounded-3xl shadow-2xl p-8 z-20 border border-gray-100 w-64'
-          >
-
-            <div className='bg-cyan-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-5'>
-
-              <Landmark className='text-cyan-600' size={32} />
-
-            </div>
-
-            <h3 className='text-4xl font-bold text-blue-950'>
-              120+
-            </h3>
-
-            <p className='text-gray-500 mt-2 leading-7'>
-              Banking & NBFC Partners Across India
-            </p>
-
-          </motion.div>
-
-          {/* Floating Card 2 */}
-          <motion.div
-            whileHover={{ y: -8 }}
-            className='absolute top-10 -right-8 bg-blue-950 text-white rounded-3xl shadow-2xl p-6 z-20 w-52'
-          >
-
-            <h3 className='text-3xl font-bold text-cyan-400'>
-              10K+
-            </h3>
-
-            <p className='text-gray-300 mt-2'>
-              Trusted Customers
-            </p>
-
-          </motion.div>
 
         </motion.div>
 
         {/* Right Content */}
         <motion.div
-          initial={{ opacity: 0, x: 80 }}
+          initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
 
           {/* Tag */}
-          <span className='bg-cyan-100 text-cyan-700 px-6 py-3 rounded-full font-semibold shadow-sm'>
+          <span className='bg-cyan-400/20 text-cyan-300 px-5 py-2 rounded-full font-semibold text-sm border border-cyan-400/20'>
             About Union Capital Services
           </span>
 
           {/* Heading */}
-          <h2 className='text-5xl lg:text-6xl font-bold text-blue-950 mt-8 leading-tight'>
+          <h2 className='text-4xl lg:text-5xl font-bold text-white mt-6 leading-tight'>
 
             Trusted Financial
-            <span className='text-cyan-500'> Solutions </span>
+            <span className='text-cyan-400'> Solutions </span>
             For Every Customer
 
           </h2>
 
           {/* Description */}
-          <p className='text-gray-600 leading-9 mt-8 text-lg'>
+          <p className='text-gray-300 leading-7 mt-5 text-base'>
 
-            Union Capital Services is a trusted financial
-            consultancy providing quick and transparent
-            loan solutions for individuals, businesses,
-            MSMEs and startups across India.
+            Union Capital Services provides quick and transparent
+            loan solutions for individuals, MSMEs, startups and businesses.
 
           </p>
 
-          <p className='text-gray-600 leading-9 mt-6 text-lg'>
+          <p className='text-gray-300 leading-7 mt-4 text-base'>
 
             We specialize in Home Loans, Business Loans,
-            Vehicle Loans, Loan Against Property,
-            Insurance, MSME Funding and Project Finance
-            through strong banking partnerships and
-            expert financial consultation.
+            Vehicle Loans, Insurance and Project Finance
+            through strong banking partnerships.
 
           </p>
 
           {/* Highlights */}
-          <div className='space-y-4 mt-10'>
+          <div className='space-y-3 mt-6'>
 
             <div className='flex items-center gap-3'>
 
-              <CheckCircle2 className='text-cyan-500' />
+              <CheckCircle2
+                size={20}
+                className='text-cyan-400'
+              />
 
-              <p className='text-gray-700 font-medium'>
+              <p className='text-gray-200 text-sm font-medium'>
                 Quick Loan Processing & Faster Approvals
               </p>
 
@@ -135,9 +94,12 @@ const About = () => {
 
             <div className='flex items-center gap-3'>
 
-              <CheckCircle2 className='text-cyan-500' />
+              <CheckCircle2
+                size={20}
+                className='text-cyan-400'
+              />
 
-              <p className='text-gray-700 font-medium'>
+              <p className='text-gray-200 text-sm font-medium'>
                 Transparent Financial Guidance
               </p>
 
@@ -145,10 +107,13 @@ const About = () => {
 
             <div className='flex items-center gap-3'>
 
-              <CheckCircle2 className='text-cyan-500' />
+              <CheckCircle2
+                size={20}
+                className='text-cyan-400'
+              />
 
-              <p className='text-gray-700 font-medium'>
-                Customized Loan Solutions For Businesses
+              <p className='text-gray-200 text-sm font-medium'>
+                Customized Loan Solutions
               </p>
 
             </div>
@@ -156,25 +121,25 @@ const About = () => {
           </div>
 
           {/* Features */}
-          <div className='grid sm:grid-cols-2 gap-6 mt-14'>
+          <div className='grid sm:grid-cols-2 gap-4 mt-8'>
 
             <motion.div
-              whileHover={{ y: -6 }}
-              className='bg-white border border-gray-100 shadow-lg rounded-3xl p-6 flex gap-5'
+              whileHover={{ y: -4 }}
+              className='bg-white/10 backdrop-blur-lg border border-white/10 shadow-lg rounded-2xl p-4 flex gap-4'
             >
 
-              <div className='bg-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center text-blue-900 shrink-0'>
-                <Landmark />
+              <div className='bg-white/10 w-12 h-12 rounded-xl flex items-center justify-center text-cyan-400 shrink-0'>
+                <Landmark size={22} />
               </div>
 
               <div>
 
-                <h3 className='font-bold text-xl text-blue-950'>
+                <h3 className='font-bold text-base text-white'>
                   Banking Network
                 </h3>
 
-                <p className='text-gray-500 mt-2 leading-7'>
-                  Partnerships with trusted banks & NBFCs
+                <p className='text-gray-300 mt-1 text-sm leading-6'>
+                  Trusted banks & NBFCs
                 </p>
 
               </div>
@@ -182,22 +147,22 @@ const About = () => {
             </motion.div>
 
             <motion.div
-              whileHover={{ y: -6 }}
-              className='bg-white border border-gray-100 shadow-lg rounded-3xl p-6 flex gap-5'
+              whileHover={{ y: -4 }}
+              className='bg-white/10 backdrop-blur-lg border border-white/10 shadow-lg rounded-2xl p-4 flex gap-4'
             >
 
-              <div className='bg-cyan-100 w-16 h-16 rounded-2xl flex items-center justify-center text-cyan-700 shrink-0'>
-                <Users />
+              <div className='bg-cyan-400/20 w-12 h-12 rounded-xl flex items-center justify-center text-cyan-400 shrink-0'>
+                <Users size={22} />
               </div>
 
               <div>
 
-                <h3 className='font-bold text-xl text-blue-950'>
+                <h3 className='font-bold text-base text-white'>
                   Customer Support
                 </h3>
 
-                <p className='text-gray-500 mt-2 leading-7'>
-                  Dedicated assistance for every customer
+                <p className='text-gray-300 mt-1 text-sm leading-6'>
+                  Dedicated assistance
                 </p>
 
               </div>
@@ -205,22 +170,22 @@ const About = () => {
             </motion.div>
 
             <motion.div
-              whileHover={{ y: -6 }}
-              className='bg-white border border-gray-100 shadow-lg rounded-3xl p-6 flex gap-5'
+              whileHover={{ y: -4 }}
+              className='bg-white/10 backdrop-blur-lg border border-white/10 shadow-lg rounded-2xl p-4 flex gap-4'
             >
 
-              <div className='bg-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center text-blue-900 shrink-0'>
-                <Building2 />
+              <div className='bg-white/10 w-12 h-12 rounded-xl flex items-center justify-center text-cyan-400 shrink-0'>
+                <Building2 size={22} />
               </div>
 
               <div>
 
-                <h3 className='font-bold text-xl text-blue-950'>
+                <h3 className='font-bold text-base text-white'>
                   MSME Finance
                 </h3>
 
-                <p className='text-gray-500 mt-2 leading-7'>
-                  Flexible business funding solutions
+                <p className='text-gray-300 mt-1 text-sm leading-6'>
+                  Flexible funding solutions
                 </p>
 
               </div>
@@ -228,70 +193,25 @@ const About = () => {
             </motion.div>
 
             <motion.div
-              whileHover={{ y: -6 }}
-              className='bg-white border border-gray-100 shadow-lg rounded-3xl p-6 flex gap-5'
+              whileHover={{ y: -4 }}
+              className='bg-white/10 backdrop-blur-lg border border-white/10 shadow-lg rounded-2xl p-4 flex gap-4'
             >
 
-              <div className='bg-cyan-100 w-16 h-16 rounded-2xl flex items-center justify-center text-cyan-700 shrink-0'>
-                <ShieldCheck />
+              <div className='bg-cyan-400/20 w-12 h-12 rounded-xl flex items-center justify-center text-cyan-400 shrink-0'>
+                <ShieldCheck size={22} />
               </div>
 
               <div>
 
-                <h3 className='font-bold text-xl text-blue-950'>
+                <h3 className='font-bold text-base text-white'>
                   Trusted Process
                 </h3>
 
-                <p className='text-gray-500 mt-2 leading-7'>
-                  Transparent & secure financial services
+                <p className='text-gray-300 mt-1 text-sm leading-6'>
+                  Secure financial services
                 </p>
 
               </div>
-
-            </motion.div>
-
-          </div>
-
-          {/* Stats */}
-          <div className='grid grid-cols-2 gap-6 mt-14'>
-
-            <motion.div
-              whileHover={{ scale: 1.03 }}
-              className='bg-gradient-to-br from-blue-950 to-blue-900 text-white p-10 rounded-[35px] shadow-2xl text-center'
-            >
-
-              <CircleDollarSign
-                size={50}
-                className='mx-auto mb-5 text-cyan-400'
-              />
-
-              <h3 className='text-5xl font-bold'>
-                ₹1200Cr+
-              </h3>
-
-              <p className='mt-3 text-gray-300 text-lg'>
-                Loan Disbursal
-              </p>
-
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.03 }}
-              className='bg-gradient-to-br from-cyan-500 to-cyan-400 text-white p-10 rounded-[35px] shadow-2xl text-center'
-            >
-
-              <BadgeCheck
-                size={50}
-                className='mx-auto mb-5 text-white'
-              />
-
-              <h3 className='text-5xl font-bold'>
-                10K+
-              </h3>
-
-              <p className='mt-3 text-cyan-100 text-lg'>
-                Happy Customers
-              </p>
 
             </motion.div>
 

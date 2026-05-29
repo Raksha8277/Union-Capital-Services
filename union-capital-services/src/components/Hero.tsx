@@ -2,39 +2,38 @@ import { motion } from 'framer-motion'
 
 import {
   CheckCircle,
-  Phone,
   ArrowRight,
   BadgeCheck,
 } from 'lucide-react'
 
 const Hero = () => {
   return (
-    <section className='relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#071739] via-[#0b1f52] to-cyan-700 text-white pt-32'>
+    <section className='relative min-h-screen overflow-hidden bg-gradient-to-br from-[#071739] via-[#0b1f52] to-cyan-700 text-white flex items-center pt-28 pb-10'>
 
       {/* Background Blur Effects */}
-      <div className='absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-400/20 rounded-full blur-3xl'></div>
+      <div className='absolute top-0 right-0 w-[350px] h-[350px] bg-cyan-400/20 rounded-full blur-3xl'></div>
 
-      <div className='absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/20 rounded-full blur-3xl'></div>
+      <div className='absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/20 rounded-full blur-3xl'></div>
 
-      <div className='max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center relative z-10'>
+      <div className='max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10'>
 
         {/* Left Content */}
         <div>
 
           {/* Top Badge */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className='inline-flex items-center gap-3 bg-white/10 backdrop-blur-xl border border-white/10 px-6 py-3 rounded-full shadow-xl'
+            transition={{ duration: 0.6 }}
+            className='inline-flex items-center gap-2 bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-2 rounded-full shadow-xl'
           >
 
             <BadgeCheck
-              size={20}
+              size={18}
               className='text-cyan-400'
             />
 
-            <span className='font-semibold text-sm tracking-wide'>
+            <span className='font-semibold text-sm'>
               Trusted Loan & Financial Services
             </span>
 
@@ -42,16 +41,16 @@ const Hero = () => {
 
           {/* Main Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className='text-5xl md:text-7xl font-extrabold leading-tight mt-8'
+            className='text-4xl md:text-6xl font-extrabold leading-tight mt-6'
           >
 
             Fast &
             Trusted
 
-            <span className='block text-cyan-400 mt-2'>
+            <span className='block text-cyan-400 mt-1'>
               Financial Solutions
             </span>
 
@@ -61,15 +60,14 @@ const Hero = () => {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 1 }}
-            className='mt-8 text-lg text-gray-200 leading-8 max-w-2xl'
+            transition={{ delay: 0.3, duration: 1 }}
+            className='mt-5 text-base text-gray-200 leading-7 max-w-xl'
           >
 
             Union Capital Services helps individuals,
             startups and businesses access Home Loans,
             Business Loans, MSME Funding, Vehicle Loans,
-            Insurance and Project Finance through
-            120+ trusted Banking & NBFC Partners.
+            Insurance and Project Finance.
 
           </motion.p>
 
@@ -77,8 +75,8 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 1 }}
-            className='grid sm:grid-cols-2 gap-5 mt-10'
+            transition={{ delay: 0.5, duration: 1 }}
+            className='grid sm:grid-cols-2 gap-3 mt-6'
           >
 
             {[
@@ -90,15 +88,15 @@ const Hero = () => {
 
               <div
                 key={index}
-                className='flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-4 rounded-2xl backdrop-blur-lg'
+                className='flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-3 rounded-xl backdrop-blur-lg'
               >
 
                 <CheckCircle
-                  size={20}
+                  size={18}
                   className='text-cyan-400'
                 />
 
-                <span className='font-medium'>
+                <span className='text-sm font-medium'>
                   {item}
                 </span>
 
@@ -110,39 +108,39 @@ const Hero = () => {
 
           {/* Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-            className='mt-12 flex flex-wrap gap-5'
+            transition={{ delay: 0.7, duration: 0.8 }}
+            className='mt-8 flex flex-wrap gap-4'
           >
 
-            <button className='group bg-cyan-400 hover:bg-cyan-300 transition text-blue-950 px-8 py-4 rounded-2xl font-bold shadow-2xl flex items-center gap-3'>
+            <button className='group bg-cyan-400 hover:bg-cyan-300 transition text-blue-950 px-6 py-3 rounded-xl font-bold shadow-2xl flex items-center gap-2'>
 
               Apply Loan
 
               <ArrowRight
-                size={20}
+                size={18}
                 className='group-hover:translate-x-1 transition'
               />
 
             </button>
 
-            <button className='border border-white/20 hover:bg-white hover:text-blue-950 transition px-8 py-4 rounded-2xl font-semibold backdrop-blur-lg'>
+            <button className='border border-white/20 hover:bg-white hover:text-blue-950 transition px-6 py-3 rounded-xl font-semibold backdrop-blur-lg'>
               Explore Services
             </button>
 
           </motion.div>
 
           {/* Contact Box */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
-            className='flex items-center gap-5 mt-14 bg-white/10 backdrop-blur-lg border border-white/10 px-6 py-5 rounded-3xl max-w-md'
+            className='flex items-center gap-4 mt-8 bg-white/10 backdrop-blur-lg border border-white/10 px-5 py-4 rounded-2xl max-w-sm'
           >
 
-            <div className='bg-cyan-400 p-4 rounded-2xl shadow-xl'>
-              <Phone className='text-blue-950' />
+            <div className='bg-cyan-400 p-3 rounded-xl shadow-xl'>
+              <Phone className='text-blue-950' size={20} />
             </div>
 
             <div>
@@ -151,52 +149,33 @@ const Hero = () => {
                 Call Us Anytime
               </p>
 
-              <h3 className='text-2xl font-bold mt-1'>
+              <h3 className='text-xl font-bold mt-1'>
                 +91 91135 20317
               </h3>
 
             </div>
 
-          </motion.div>
+          </motion.div> */}
 
         </div>
 
         {/* Right Image */}
         <motion.div
-          initial={{ opacity: 0, x: 80 }}
+          initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className='relative'
+          className='relative flex justify-center'
         >
 
           {/* Glow */}
-          <div className='absolute inset-0 bg-cyan-400/20 rounded-[40px] blur-3xl'></div>
+          <div className='absolute inset-0 bg-cyan-400/20 rounded-[30px] blur-3xl'></div>
 
           {/* Main Image */}
           <img
             src='https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop'
             alt='Union Capital Services'
-            className='relative z-10 rounded-[40px] shadow-2xl border border-white/10'
+            className='relative z-10 rounded-[30px] shadow-2xl border border-white/10 max-h-[75vh] object-cover'
           />
-
-          {/* Floating Stats Card */}
-          <div className='absolute -bottom-10 -left-5 md:-left-10 bg-white text-blue-950 rounded-[30px] shadow-2xl p-7 z-20 w-72 border border-gray-100'>
-
-            <h3 className='text-4xl font-extrabold'>
-              ₹1200Cr+
-            </h3>
-
-            <p className='text-gray-500 mt-3 leading-7'>
-              Successfully disbursed loans across
-              India with trusted financial support.
-            </p>
-
-            <div className='mt-5 flex items-center gap-2 text-cyan-600 font-semibold'>
-              <CheckCircle size={18} />
-              <span>10K+ Happy Customers</span>
-            </div>
-
-          </div>
 
         </motion.div>
 

@@ -11,158 +11,154 @@ import {
 
 const Contact = () => {
   return (
-    <section className='pt-40 pb-28 bg-gradient-to-b from-slate-50 via-white to-cyan-50 overflow-hidden relative'>
+    <section className='py-40 bg-gradient-to-b from-[#071739] via-[#0b1f52] to-cyan-700 overflow-hidden relative text-white'>
 
       {/* Background Blur */}
-      <div className='absolute top-0 right-0 w-[400px] h-[400px] bg-cyan-200/40 rounded-full blur-3xl'></div>
+      <div className='absolute top-0 right-0 w-60 h-60 bg-cyan-400/10 rounded-full blur-3xl'></div>
 
-      <div className='absolute bottom-0 left-0 w-[350px] h-[350px] bg-blue-200/40 rounded-full blur-3xl'></div>
+      <div className='absolute bottom-0 left-0 w-60 h-60 bg-blue-400/10 rounded-full blur-3xl'></div>
 
-      <div className='max-w-7xl mx-auto px-6 relative z-10'>
+      <div className='max-w-6xl mx-auto px-4 relative z-10'>
 
         {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='text-center mb-20'
+          transition={{ duration: 0.5 }}
+          className='text-center mb-10'
         >
 
-          <span className='bg-cyan-100 text-cyan-700 px-6 py-3 rounded-full font-semibold shadow-sm'>
+          <span className='bg-white/10 border border-white/10 text-cyan-300 px-4 py-2 rounded-full text-sm font-medium'>
             Contact Union Capital
           </span>
 
-          <h2 className='text-5xl md:text-6xl font-bold text-blue-950 mt-8 leading-tight'>
+          <h2 className='text-3xl md:text-4xl font-bold mt-5 leading-tight'>
 
             Get Financial
-            <span className='text-cyan-500'> Guidance Today</span>
+            <span className='text-cyan-300'> Guidance</span>
 
           </h2>
 
-          <p className='text-gray-600 mt-6 text-lg max-w-4xl mx-auto leading-8'>
-            Connect with Union Capital Services for quick loan
-            approvals, MSME funding, business finance,
-            home loans and trusted banking assistance.
+          <p className='text-gray-300 mt-4 text-sm md:text-base max-w-2xl mx-auto leading-7'>
+            Connect with us for home loans, business loans,
+            MSME finance and trusted banking support.
           </p>
 
         </motion.div>
 
-        <div className='grid lg:grid-cols-2 gap-12'>
+        {/* Main Grid */}
+        <div className='grid lg:grid-cols-2 gap-6'>
 
-          {/* Left Contact Card */}
+          {/* Left Side */}
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className='bg-gradient-to-br from-blue-950 via-blue-900 to-cyan-700 text-white rounded-[45px] p-12 relative overflow-hidden shadow-2xl'
+            transition={{ duration: 0.5 }}
+            className='bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-6'
           >
 
-            {/* Blur Effects */}
-            <div className='absolute top-0 right-0 w-72 h-72 bg-cyan-400/20 rounded-full blur-3xl'></div>
-
-            <div className='absolute bottom-0 left-0 w-60 h-60 bg-blue-400/20 rounded-full blur-3xl'></div>
-
-            {/* Heading */}
-            <div className='relative z-10'>
-
-              <div className='bg-white/10 backdrop-blur-lg border border-white/10 w-24 h-24 rounded-[30px] flex items-center justify-center mb-8'>
-                <Headphones
-                  size={50}
-                  className='text-cyan-400'
-                />
-              </div>
-
-              <h3 className='text-4xl font-bold'>
-                Contact Information
-              </h3>
-
-              <p className='mt-5 text-gray-200 leading-8 text-lg'>
-                Our financial experts are ready to guide you
-                with trusted and transparent financial solutions.
-              </p>
-
+            {/* Icon */}
+            <div className='bg-cyan-400/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-5'>
+              <Headphones
+                size={32}
+                className='text-cyan-300'
+              />
             </div>
 
-            {/* Feature Badges */}
-            <div className='flex flex-wrap gap-4 mt-10 relative z-10'>
+            <h3 className='text-2xl font-bold'>
+              Contact Information
+            </h3>
 
-              <div className='bg-white/10 backdrop-blur-lg px-5 py-3 rounded-full flex items-center gap-2 text-sm border border-white/10'>
+            <p className='text-gray-300 mt-3 text-sm leading-6'>
+              Our financial experts are ready to guide you
+              with trusted financial solutions.
+            </p>
+
+            {/* Badges */}
+            <div className='flex flex-wrap gap-3 mt-5'>
+
+              <div className='bg-white/10 border border-white/10 px-4 py-2 rounded-full flex items-center gap-2 text-xs'>
                 <CheckCircle
-                  size={18}
-                  className='text-cyan-400'
+                  size={15}
+                  className='text-cyan-300'
                 />
                 Quick Loan Processing
               </div>
 
-              <div className='bg-white/10 backdrop-blur-lg px-5 py-3 rounded-full flex items-center gap-2 text-sm border border-white/10'>
+              <div className='bg-white/10 border border-white/10 px-4 py-2 rounded-full flex items-center gap-2 text-xs'>
                 <CheckCircle
-                  size={18}
-                  className='text-cyan-400'
+                  size={15}
+                  className='text-cyan-300'
                 />
-                Trusted Financial Support
+                Trusted Support
               </div>
 
             </div>
 
-            {/* Contact Info */}
-            <div className='space-y-8 mt-14 relative z-10'>
+            {/* Contact Details */}
+            <div className='space-y-4 mt-7'>
 
               {/* Address */}
-              <div className='bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-white/10 flex gap-5'>
+              <div className='bg-white/10 border border-white/10 rounded-2xl p-4 flex gap-3'>
 
-                <div className='bg-cyan-500/20 p-4 rounded-2xl h-fit'>
-                  <MapPin className='text-cyan-400' />
+                <div className='bg-cyan-400/20 p-3 rounded-xl h-fit'>
+                  <MapPin
+                    size={18}
+                    className='text-cyan-300'
+                  />
                 </div>
 
                 <div>
-                  <h4 className='text-2xl font-semibold'>
-                    Office Address
+                  <h4 className='font-semibold text-base'>
+                    Address
                   </h4>
 
-                  <p className='text-gray-200 leading-8 mt-3'>
-                    #6, 50 Feet Road,
-                    Avalahalli Extension,
-                    Girinagar,
-                    Bangalore - 560026
+                  <p className='text-gray-300 text-sm mt-1 leading-6'>
+                    Girinagar, Bangalore - 560026
                   </p>
                 </div>
 
               </div>
 
               {/* Phone */}
-              <div className='bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-white/10 flex gap-5'>
+              <div className='bg-white/10 border border-white/10 rounded-2xl p-4 flex gap-3'>
 
-                <div className='bg-cyan-500/20 p-4 rounded-2xl h-fit'>
-                  <Phone className='text-cyan-400' />
+                <div className='bg-cyan-400/20 p-3 rounded-xl h-fit'>
+                  <Phone
+                    size={18}
+                    className='text-cyan-300'
+                  />
                 </div>
 
                 <div>
-                  <h4 className='text-2xl font-semibold'>
-                    Contact Numbers
+                  <h4 className='font-semibold text-base'>
+                    Phone
                   </h4>
 
-                  <div className='space-y-2 mt-3 text-gray-200'>
+                  <div className='text-gray-300 text-sm mt-1 space-y-1'>
                     <p>+91 91135 20317</p>
                     <p>+91 99720 69920</p>
-                    <p>+91 81238 73820</p>
                   </div>
                 </div>
 
               </div>
 
               {/* Email */}
-              <div className='bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-white/10 flex gap-5'>
+              <div className='bg-white/10 border border-white/10 rounded-2xl p-4 flex gap-3'>
 
-                <div className='bg-cyan-500/20 p-4 rounded-2xl h-fit'>
-                  <Mail className='text-cyan-400' />
+                <div className='bg-cyan-400/20 p-3 rounded-xl h-fit'>
+                  <Mail
+                    size={18}
+                    className='text-cyan-300'
+                  />
                 </div>
 
                 <div>
-                  <h4 className='text-2xl font-semibold'>
-                    Email Support
+                  <h4 className='font-semibold text-base'>
+                    Email
                   </h4>
 
-                  <div className='space-y-2 mt-3 text-gray-200 break-all'>
+                  <div className='text-gray-300 text-sm mt-1 break-all'>
                     <p>sandeshunion@gmail.com</p>
                     <p>abhijithshettyunion@gmail.com</p>
                   </div>
@@ -170,24 +166,23 @@ const Contact = () => {
 
               </div>
 
-              {/* Working Hours */}
-              <div className='bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-white/10 flex gap-5'>
+              {/* Hours */}
+              <div className='bg-white/10 border border-white/10 rounded-2xl p-4 flex gap-3'>
 
-                <div className='bg-cyan-500/20 p-4 rounded-2xl h-fit'>
-                  <Clock3 className='text-cyan-400' />
+                <div className='bg-cyan-400/20 p-3 rounded-xl h-fit'>
+                  <Clock3
+                    size={18}
+                    className='text-cyan-300'
+                  />
                 </div>
 
                 <div>
-                  <h4 className='text-2xl font-semibold'>
+                  <h4 className='font-semibold text-base'>
                     Working Hours
                   </h4>
 
-                  <p className='text-gray-200 mt-3'>
-                    Monday - Saturday
-                  </p>
-
-                  <p className='text-gray-200'>
-                    9:00 AM - 7:00 PM
+                  <p className='text-gray-300 text-sm mt-1'>
+                    Mon - Sat | 9:00 AM - 7:00 PM
                   </p>
                 </div>
 
@@ -199,77 +194,69 @@ const Contact = () => {
 
           {/* Right Form */}
           <motion.form
-            initial={{ opacity: 0, x: 60 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className='bg-white rounded-[45px] shadow-2xl p-12 border border-gray-100 relative overflow-hidden'
+            transition={{ duration: 0.5 }}
+            className='bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-6'
           >
 
-            {/* Glow */}
-            <div className='absolute top-0 right-0 w-60 h-60 bg-cyan-100 rounded-full blur-3xl opacity-40'></div>
+            <div className='bg-cyan-400/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-5'>
+              <Send
+                size={28}
+                className='text-cyan-300'
+              />
+            </div>
 
-            <div className='relative z-10'>
+            <h3 className='text-2xl font-bold'>
+              Send Message
+            </h3>
 
-              <div className='bg-blue-100 text-blue-950 w-24 h-24 rounded-[30px] flex items-center justify-center mb-8'>
-                <Send size={45} />
-              </div>
+            <p className='text-gray-300 mt-3 text-sm leading-6 mb-6'>
+              Fill the enquiry form and our team will
+              contact you shortly.
+            </p>
 
-              <h3 className='text-4xl font-bold text-blue-950'>
-                Send Message
-              </h3>
+            <div className='space-y-4'>
 
-              <p className='text-gray-500 mt-5 mb-10 leading-8 text-lg'>
-                Fill the enquiry form and our Union Capital
-                team will contact you shortly regarding your
-                financial requirements.
-              </p>
+              <input
+                type='text'
+                placeholder='Full Name'
+                className='w-full p-3.5 rounded-xl bg-white/10 border border-white/10 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-300'
+              />
 
-              <div className='space-y-6'>
+              <input
+                type='email'
+                placeholder='Email Address'
+                className='w-full p-3.5 rounded-xl bg-white/10 border border-white/10 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-300'
+              />
 
-                <input
-                  type='text'
-                  placeholder='Full Name'
-                  className='w-full p-5 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-cyan-400'
-                />
+              <input
+                type='text'
+                placeholder='Phone Number'
+                className='w-full p-3.5 rounded-xl bg-white/10 border border-white/10 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-300'
+              />
 
-                <input
-                  type='email'
-                  placeholder='Email Address'
-                  className='w-full p-5 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-cyan-400'
-                />
+              <select
+                className='w-full p-3.5 rounded-xl bg-white/10 border border-white/10 text-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-300'
+              >
 
-                <input
-                  type='text'
-                  placeholder='Phone Number'
-                  className='w-full p-5 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-cyan-400'
-                />
+                <option>Select Loan Type</option>
+                <option>Home Loan</option>
+                <option>Business Loan</option>
+                <option>MSME Loan</option>
+                <option>Vehicle Loan</option>
 
-                <select
-                  className='w-full p-5 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 text-gray-500'
-                >
+              </select>
 
-                  <option>Select Loan Type</option>
-                  <option>Home Loan</option>
-                  <option>Business Loan</option>
-                  <option>MSME Loan</option>
-                  <option>Vehicle Loan</option>
-                  <option>Personal Loan</option>
-                  <option>Loan Against Property</option>
-                  <option>Insurance</option>
+              <textarea
+                placeholder='Write your message'
+                rows={4}
+                className='w-full p-3.5 rounded-xl bg-white/10 border border-white/10 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-300'
+              />
 
-                </select>
-
-                <textarea
-                  placeholder='Write your message'
-                  rows={6}
-                  className='w-full p-5 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-cyan-400'
-                />
-
-                <button className='w-full bg-gradient-to-r from-blue-950 to-cyan-600 hover:opacity-90 transition text-white py-5 rounded-2xl font-bold text-lg shadow-2xl'>
-                  Submit Enquiry
-                </button>
-
-              </div>
+              <button className='w-full bg-cyan-400 hover:bg-cyan-300 text-blue-950 py-3 rounded-xl font-semibold transition'>
+                Submit Enquiry
+              </button>
 
             </div>
 

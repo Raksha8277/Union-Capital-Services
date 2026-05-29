@@ -15,100 +15,98 @@ import { motion } from 'framer-motion'
 
 const services = [
   {
-    icon: <Landmark size={42} />,
+    icon: <Landmark size={34} />,
     title: 'Business Loans',
-    desc: 'Quick MSME and unsecured business loans with faster approvals and flexible repayment solutions.',
+    desc: 'Quick MSME and unsecured business loans with faster approvals.',
   },
   {
-    icon: <Building2 size={42} />,
+    icon: <Building2 size={34} />,
     title: 'Home Loans',
-    desc: 'Affordable housing finance with competitive interest rates and smooth loan processing.',
+    desc: 'Affordable housing finance with smooth loan processing.',
   },
   {
-    icon: <Briefcase size={42} />,
+    icon: <Briefcase size={34} />,
     title: 'Project Finance',
-    desc: 'Customized funding solutions for infrastructure, startups and commercial growth projects.',
+    desc: 'Funding solutions for startups and business growth.',
   },
   {
-    icon: <CreditCard size={42} />,
+    icon: <CreditCard size={34} />,
     title: 'Credit Services',
-    desc: 'Professional credit card assistance, restructuring and financial advisory services.',
+    desc: 'Professional credit assistance and advisory services.',
   },
 ]
 
 const features = [
   {
-    icon: <ShieldCheck size={24} />,
+    icon: <ShieldCheck size={20} />,
     title: 'Trusted Banking Partners',
   },
   {
-    icon: <BadgeIndianRupee size={24} />,
+    icon: <BadgeIndianRupee size={20} />,
     title: 'Quick Loan Processing',
   },
   {
-    icon: <Users size={24} />,
-    title: 'Dedicated Customer Support',
+    icon: <Users size={20} />,
+    title: 'Customer Support',
   },
   {
-    icon: <TrendingUp size={24} />,
-    title: 'Business Growth Solutions',
+    icon: <TrendingUp size={20} />,
+    title: 'Business Growth',
   },
 ]
 
 const Services = () => {
   return (
-    <section className='relative py-28 bg-gradient-to-b from-white via-slate-50 to-cyan-50 overflow-hidden'>
+    <section className='relative min-h-screen py-40 bg-gradient-to-br from-[#071739] via-[#0b1f52] to-cyan-700 overflow-hidden text-white flex items-center'>
 
       {/* Background Effects */}
-      <div className='absolute top-0 left-0 w-80 h-80 bg-cyan-200/40 rounded-full blur-3xl'></div>
+      <div className='absolute top-0 left-0 w-72 h-72 bg-cyan-400/20 rounded-full blur-3xl'></div>
 
-      <div className='absolute bottom-0 right-0 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl'></div>
+      <div className='absolute bottom-0 right-0 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl'></div>
 
       <div className='max-w-7xl mx-auto px-6 relative z-10'>
 
         {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className='text-center mb-24'
+          className='text-center mb-14'
         >
 
-          <span className='bg-cyan-100 text-cyan-700 px-6 py-3 rounded-full font-semibold shadow-sm'>
+          <span className='bg-cyan-400/20 text-cyan-300 px-5 py-2 rounded-full font-semibold text-sm border border-cyan-400/20'>
             Our Financial Services
           </span>
 
-          <h2 className='text-5xl md:text-6xl font-bold text-blue-950 mt-8 leading-tight'>
+          <h2 className='text-4xl md:text-5xl font-bold text-white mt-6 leading-tight'>
 
             Smart Financial
-            <span className='block text-cyan-500 mt-2'>
+            <span className='block text-cyan-400 mt-1'>
               Solutions For Everyone
             </span>
 
           </h2>
 
-          <p className='text-gray-600 mt-8 text-lg max-w-3xl mx-auto leading-9'>
-            Union Capital Services delivers trusted financial
-            products and banking solutions for businesses,
-            startups, entrepreneurs and salaried individuals
-            across India.
+          <p className='text-gray-300 mt-5 text-base max-w-2xl mx-auto leading-7'>
+            Trusted financial products and banking solutions
+            for businesses, startups and individuals across India.
           </p>
 
           {/* Features */}
-          <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14'>
+          <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10'>
 
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                whileHover={{ y: -5 }}
-                className='bg-white border border-gray-100 shadow-lg rounded-3xl p-6 flex items-center gap-4 hover:shadow-2xl transition duration-300'
+                whileHover={{ y: -4 }}
+                className='bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-4 flex items-center gap-3 shadow-lg'
               >
 
-                <div className='bg-cyan-100 text-cyan-600 p-4 rounded-2xl'>
+                <div className='bg-cyan-400/20 text-cyan-400 p-3 rounded-xl'>
                   {feature.icon}
                 </div>
 
-                <h4 className='font-semibold text-blue-950 text-left leading-7'>
+                <h4 className='font-medium text-white text-sm text-left leading-6'>
                   {feature.title}
                 </h4>
 
@@ -120,52 +118,52 @@ const Services = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-10'>
+        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
 
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.6,
                 delay: index * 0.1,
               }}
               whileHover={{
-                y: -12,
+                y: -8,
               }}
-              className='group relative bg-white rounded-[35px] p-10 border border-gray-100 shadow-xl overflow-hidden hover:shadow-2xl transition duration-500'
+              className='group relative bg-white/10 backdrop-blur-lg border border-white/10 rounded-3xl p-6 overflow-hidden shadow-xl'
             >
 
               {/* Top Gradient */}
-              <div className='absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-950 via-cyan-500 to-cyan-400'></div>
+              <div className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-cyan-300'></div>
 
               {/* Hover Glow */}
-              <div className='absolute top-0 right-0 w-52 h-52 bg-cyan-100 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition duration-500'></div>
+              <div className='absolute top-0 right-0 w-40 h-40 bg-cyan-400/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition duration-500'></div>
 
               {/* Icon */}
-              <div className='relative z-10 w-20 h-20 rounded-3xl bg-blue-100 text-blue-950 flex items-center justify-center group-hover:bg-cyan-500 group-hover:text-white transition duration-300'>
+              <div className='relative z-10 w-16 h-16 rounded-2xl bg-cyan-400/20 text-cyan-400 flex items-center justify-center group-hover:bg-cyan-400 group-hover:text-blue-950 transition duration-300'>
 
                 {service.icon}
 
               </div>
 
               {/* Title */}
-              <h3 className='relative z-10 text-3xl font-bold text-blue-950 mt-8 leading-tight'>
+              <h3 className='relative z-10 text-2xl font-bold text-white mt-5 leading-tight'>
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className='relative z-10 text-gray-600 leading-8 mt-5'>
+              <p className='relative z-10 text-gray-300 leading-7 mt-4 text-sm'>
                 {service.desc}
               </p>
 
               {/* Learn More */}
-              <button className='relative z-10 mt-8 flex items-center gap-3 text-cyan-600 font-semibold hover:text-blue-950 transition duration-300'>
+              <button className='relative z-10 mt-5 flex items-center gap-2 text-cyan-400 font-semibold hover:text-white transition duration-300 text-sm'>
 
                 Learn More
 
-                <ArrowRight size={20} />
+                <ArrowRight size={18} />
 
               </button>
 
@@ -176,23 +174,23 @@ const Services = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className='relative mt-28 bg-gradient-to-r from-blue-950 via-blue-900 to-cyan-700 rounded-[45px] px-8 md:px-16 py-16 text-center overflow-hidden shadow-2xl'
+          className='relative mt-14 bg-white/10 backdrop-blur-lg border border-white/10 rounded-[35px] px-8 py-12 text-center overflow-hidden shadow-2xl'
         >
 
           {/* Blur Effects */}
-          <div className='absolute top-0 right-0 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl'></div>
+          <div className='absolute top-0 right-0 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl'></div>
 
-          <div className='absolute bottom-0 left-0 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl'></div>
+          <div className='absolute bottom-0 left-0 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl'></div>
 
           <div className='relative z-10'>
 
             {/* Badge */}
-            <div className='inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg border border-white/10 px-5 py-3 rounded-full'>
+            <div className='inline-flex items-center gap-2 bg-cyan-400/20 backdrop-blur-lg border border-cyan-400/20 px-4 py-2 rounded-full'>
 
-              <CheckCircle2 size={18} className='text-cyan-400' />
+              <CheckCircle2 size={16} className='text-cyan-400' />
 
               <span className='text-sm font-semibold text-white'>
                 Trusted Financial Guidance
@@ -201,20 +199,18 @@ const Services = () => {
             </div>
 
             {/* Heading */}
-            <h3 className='text-4xl md:text-5xl font-bold text-white mt-8 leading-tight'>
+            <h3 className='text-3xl md:text-4xl font-bold text-white mt-6 leading-tight'>
               Need Expert Financial Assistance?
             </h3>
 
             {/* Description */}
-            <p className='mt-7 text-gray-200 text-lg max-w-3xl mx-auto leading-9'>
-              Our experienced financial advisors are ready
-              to help you choose the right banking and
-              loan solutions for your personal and
-              business growth.
+            <p className='mt-5 text-gray-300 text-base max-w-2xl mx-auto leading-7'>
+              Our financial advisors help you choose the right
+              banking and loan solutions for personal and business growth.
             </p>
 
             {/* Button */}
-            <button className='mt-10 bg-cyan-400 hover:bg-cyan-300 text-blue-950 px-10 py-5 rounded-2xl font-bold text-lg transition duration-300 shadow-2xl'>
+            <button className='mt-8 bg-cyan-400 hover:bg-cyan-300 text-blue-950 px-8 py-4 rounded-2xl font-bold transition duration-300 shadow-xl'>
               Contact Our Team
             </button>
 

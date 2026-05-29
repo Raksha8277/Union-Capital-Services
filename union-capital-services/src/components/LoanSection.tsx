@@ -2,7 +2,6 @@ import {
   Landmark,
   Home,
   Briefcase,
-  CreditCard,
   Car,
   Building2,
   ShieldCheck,
@@ -14,107 +13,97 @@ import { motion } from 'framer-motion'
 
 const loans = [
   {
-    icon: <Landmark size={42} />,
+    icon: <Landmark size={28} />,
     title: 'Business Loan',
     description:
-      'Fast business funding solutions for entrepreneurs, traders and growing companies.',
+      'Fast funding solutions for businesses and entrepreneurs.',
   },
   {
-    icon: <Home size={42} />,
+    icon: <Home size={28} />,
     title: 'Home Loan',
     description:
-      'Affordable home financing with low interest rates and quick approval process.',
+      'Simple and affordable home financing options.',
   },
   {
-    icon: <Briefcase size={42} />,
+    icon: <Briefcase size={28} />,
     title: 'MSME Finance',
     description:
-      'Customized MSME financial support for startups and small businesses.',
+      'Financial support for startups and MSMEs.',
   },
   {
-    icon: <CreditCard size={42} />,
-    title: 'Credit Card Services',
-    description:
-      'Premium credit card assistance with cashback, rewards and banking support.',
-  },
-  {
-    icon: <Car size={42} />,
+    icon: <Car size={28} />,
     title: 'Vehicle Loan',
     description:
-      'Easy car and commercial vehicle loans with minimal documentation.',
+      'Quick vehicle loans with easy documentation.',
   },
   {
-    icon: <Building2 size={42} />,
+    icon: <Building2 size={28} />,
     title: 'Project Finance',
     description:
-      'Reliable project funding for infrastructure and commercial developments.',
+      'Reliable funding for business projects.',
   },
 ]
 
 const features = [
   {
-    icon: <ShieldCheck size={24} />,
-    title: 'Trusted Banking Network',
+    icon: <ShieldCheck size={18} />,
+    title: 'Trusted Banking',
   },
   {
-    icon: <BadgeIndianRupee size={24} />,
-    title: 'Quick Loan Disbursal',
+    icon: <BadgeIndianRupee size={18} />,
+    title: 'Fast Approval',
   },
 ]
 
 const LoanSection = () => {
   return (
-    <section className='relative py-28 bg-gradient-to-b from-slate-50 via-white to-cyan-50 overflow-hidden'>
+    <section className='relative py-40 bg-gradient-to-b from-[#071739] via-[#0b1f52] to-cyan-700 overflow-hidden text-white'>
 
-      {/* Background Effects */}
-      <div className='absolute top-0 left-0 w-80 h-80 bg-cyan-200/40 rounded-full blur-3xl'></div>
+      {/* Background Blur */}
+      <div className='absolute top-0 left-0 w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl'></div>
 
-      <div className='absolute bottom-0 right-0 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl'></div>
+      <div className='absolute bottom-0 right-0 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl'></div>
 
-      <div className='max-w-7xl mx-auto px-6 relative z-10'>
+      <div className='max-w-6xl mx-auto px-5 relative z-10'>
 
         {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='text-center mb-24'
+          transition={{ duration: 0.6 }}
+          className='text-center mb-10'
         >
 
-          <span className='bg-cyan-100 text-cyan-700 px-6 py-3 rounded-full font-semibold shadow-sm'>
-            Our Financial Products
+          <span className='bg-white/10 border border-white/10 text-cyan-300 px-4 py-2 rounded-full text-sm font-medium'>
+            Our Loan Services
           </span>
 
-          <h2 className='text-5xl md:text-6xl font-bold text-blue-950 mt-8 leading-tight'>
+          <h2 className='text-3xl md:text-4xl font-bold mt-5 leading-tight'>
 
-            Smart Financial Solutions
-            <span className='block text-cyan-500 mt-2'>
-              For Every Need
-            </span>
+            Financial Solutions
+            <span className='text-cyan-300'> For Everyone</span>
 
           </h2>
 
-          <p className='mt-8 text-gray-600 text-lg max-w-3xl mx-auto leading-9'>
-            Union Capital Services provides reliable financial
-            products for businesses, entrepreneurs,
-            startups and individuals with trusted
-            banking partnerships across India.
+          <p className='mt-4 text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-7'>
+            Trusted loan and banking solutions with
+            faster approvals and reliable support.
           </p>
 
           {/* Features */}
-          <div className='flex flex-wrap justify-center gap-6 mt-12'>
+          <div className='flex flex-wrap justify-center gap-3 mt-6'>
 
             {features.map((item, index) => (
               <div
                 key={index}
-                className='flex items-center gap-4 bg-white border border-gray-100 shadow-lg px-7 py-5 rounded-2xl hover:shadow-2xl transition duration-300'
+                className='flex items-center gap-2 bg-white/10 border border-white/10 px-4 py-2 rounded-xl backdrop-blur-md'
               >
 
-                <div className='bg-cyan-100 text-cyan-600 p-3 rounded-2xl'>
+                <div className='text-cyan-300'>
                   {item.icon}
                 </div>
 
-                <p className='font-semibold text-blue-950'>
+                <p className='text-sm text-white'>
                   {item.title}
                 </p>
 
@@ -125,53 +114,45 @@ const LoanSection = () => {
 
         </motion.div>
 
-        {/* Cards */}
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
+        {/* Loan Cards */}
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5'>
 
           {loans.map((loan, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.6,
+                duration: 0.5,
                 delay: index * 0.1,
               }}
-              whileHover={{
-                y: -12,
-              }}
-              className='group relative bg-white rounded-[35px] p-10 border border-gray-100 shadow-xl overflow-hidden hover:shadow-2xl transition duration-500'
+              whileHover={{ y: -5 }}
+              className='group bg-white/10 backdrop-blur-lg border border-white/10 rounded-3xl p-5 hover:border-cyan-300/30 transition duration-300'
             >
 
-              {/* Top Gradient */}
-              <div className='absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-950 via-cyan-500 to-cyan-400'></div>
-
-              {/* Hover Glow */}
-              <div className='absolute top-0 right-0 w-52 h-52 bg-cyan-100 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition duration-500'></div>
-
               {/* Icon */}
-              <div className='relative z-10 w-20 h-20 bg-blue-100 text-blue-950 rounded-3xl flex items-center justify-center group-hover:bg-cyan-500 group-hover:text-white transition duration-300'>
+              <div className='w-14 h-14 rounded-2xl bg-cyan-400/15 text-cyan-300 flex items-center justify-center group-hover:bg-cyan-300 group-hover:text-blue-950 transition duration-300'>
 
                 {loan.icon}
 
               </div>
 
               {/* Title */}
-              <h3 className='relative z-10 text-3xl font-bold text-blue-950 mt-8'>
+              <h3 className='text-xl font-semibold mt-5'>
                 {loan.title}
               </h3>
 
               {/* Description */}
-              <p className='relative z-10 text-gray-600 leading-8 mt-5'>
+              <p className='text-gray-300 text-sm leading-6 mt-3'>
                 {loan.description}
               </p>
 
               {/* Button */}
-              <button className='relative z-10 mt-8 flex items-center gap-3 bg-blue-950 hover:bg-cyan-500 text-white px-7 py-4 rounded-2xl font-semibold transition duration-300 shadow-lg'>
+              <button className='mt-5 flex items-center gap-2 text-sm font-semibold text-cyan-300 hover:text-white transition'>
 
                 Apply Now
 
-                <ArrowRight size={20} />
+                <ArrowRight size={16} />
 
               </button>
 
@@ -180,36 +161,26 @@ const LoanSection = () => {
 
         </div>
 
-        {/* CTA Section */}
+        {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='relative mt-28 bg-gradient-to-r from-blue-950 via-blue-900 to-cyan-700 rounded-[45px] px-8 md:px-16 py-16 text-center overflow-hidden shadow-2xl'
+          transition={{ duration: 0.6 }}
+          className='mt-12 bg-white/10 border border-white/10 backdrop-blur-lg rounded-3xl p-8 text-center'
         >
 
-          {/* Blur */}
-          <div className='absolute top-0 right-0 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl'></div>
+          <h3 className='text-2xl md:text-3xl font-bold'>
+            Need Financial Help?
+          </h3>
 
-          <div className='absolute bottom-0 left-0 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl'></div>
+          <p className='mt-4 text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-7'>
+            Our experts are ready to guide you with
+            trusted banking and loan solutions.
+          </p>
 
-          <div className='relative z-10'>
-
-            <h3 className='text-4xl md:text-5xl font-bold text-white leading-tight'>
-              Need Financial Assistance?
-            </h3>
-
-            <p className='mt-7 text-gray-200 text-lg max-w-3xl mx-auto leading-9'>
-              Our expert financial advisors help you choose
-              the best banking and loan solutions for your
-              personal and business growth.
-            </p>
-
-            <button className='mt-10 bg-cyan-400 hover:bg-cyan-300 text-blue-950 px-10 py-5 rounded-2xl font-bold text-lg transition duration-300 shadow-2xl'>
-              Contact Our Team
-            </button>
-
-          </div>
+          <button className='mt-6 bg-cyan-400 hover:bg-cyan-300 text-blue-950 px-7 py-3 rounded-2xl font-semibold transition duration-300 shadow-lg'>
+            Contact Our Team
+          </button>
 
         </motion.div>
 
