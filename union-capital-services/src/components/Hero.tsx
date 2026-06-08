@@ -114,13 +114,6 @@ const Hero = () => {
             className='mt-8 flex flex-wrap gap-4'
           >
 
-           <Link
-  to='/loans'
-  className='inline-block mt-6 bg-cyan-400 hover:bg-cyan-300 text-blue-950 px-7 py-3 rounded-2xl font-semibold transition duration-300 shadow-lg'
->
-  View Loans
-</Link>
-
             <Link
   to='/services'
   className='inline-block mt-6 bg-cyan-400 hover:bg-cyan-300 text-blue-950 px-7 py-3 rounded-2xl font-semibold transition duration-300 shadow-lg'

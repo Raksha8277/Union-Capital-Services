@@ -245,6 +245,8 @@ const Contact = () => {
                 <option>Business Loan</option>
                 <option>MSME Loan</option>
                 <option>Vehicle Loan</option>
+                <option>Personal Loan</option>
+                <option>Loan Against Property</option>
 
               </select>
 

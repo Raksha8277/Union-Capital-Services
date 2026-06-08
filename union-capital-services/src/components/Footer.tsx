@@ -129,7 +129,8 @@ const Footer = () => {
                 'Home Loans',
                 'MSME Finance',
                 'Vehicle Loans',
-                'Project Funding',
+                'Personal Loans',
+                'Loan Against Property',
               ].map((service, index) => (
 
                 <div

@@ -27,14 +27,25 @@ const services = [
   },
   {
     icon: <Briefcase size={30} />,
-    title: 'Project Finance',
-    desc: 'Funding solutions for startups and business growth.',
+    title: 'MSME Finance',
+    desc: 'Tailored financial solutions for startups and small businesses.',
   },
   {
     icon: <CreditCard size={30} />,
-    title: 'Credit Services',
-    desc: 'Professional credit assistance and advisory services.',
+    title: 'Vehicle Loans',
+    desc: 'Flexible vehicle financing options with competitive rates.',
   },
+  {
+    icon: <CreditCard size={30} />,
+    title: 'Personal Loans',
+    desc: 'Quick and easy personal loan options for your needs.',
+  },
+  {
+    icon: <CreditCard size={30} />,
+    title: 'Loan Against Property',
+    desc: 'Flexible loan options secured against your property.',
+  },
+
 ]
 
 const features = [
@@ -117,7 +128,7 @@ const Services = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-5'>
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
 
           {services.map((service, index) => (
             <motion.div
