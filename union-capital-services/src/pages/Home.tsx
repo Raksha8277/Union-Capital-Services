@@ -15,12 +15,12 @@ const Home = () => {
       <Navbar />
       <Hero />
       <Stats />
-      <LoanSection />
-      <Services />
       <About />
+      <LoanSection />
+      <Services />     
+      <Banks />
       <Team />
       <Contact />
-      <Banks />
       <Footer />
     </>
   )

@@ -1,8 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 
 import Home from './pages/Home'
-import Login from './pages/Login'
-import Signup from './pages/Signup'
 
 import PartnersPage from './pages/PartnersPage'
 import ServicesPage from './pages/ServicesPage'
@@ -17,11 +15,6 @@ const App = () => {
 
       {/* Home */}
       <Route path='/' element={<Home />} />
-
-      {/* Auth Pages */}
-      <Route path='/login' element={<Login />} />
-
-      <Route path='/signup' element={<Signup />} />
 
       {/* Other Pages */}
       <Route path='/partners' element={<PartnersPage />} />

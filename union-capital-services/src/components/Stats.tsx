@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+
 import {
   Landmark,
   Users,
@@ -11,62 +13,60 @@ const stats = [
     title: 'Loan Services',
     description:
       'Business, home and MSME loan solutions with trusted banking support.',
-    icon: <Landmark size={30} />,
+    icon: <Landmark size={22} />,
   },
 
   {
     title: 'Banking Partners',
     description:
       'Strong network with leading banks and NBFC institutions across India.',
-    icon: <ShieldCheck size={30} />,
+    icon: <ShieldCheck size={22} />,
   },
 
   {
     title: 'Customer Support',
     description:
       'Helping businesses and individuals with smooth financial guidance.',
-    icon: <Users size={30} />,
+    icon: <Users size={22} />,
   },
 
   {
     title: 'Fast Processing',
     description:
       'Quick approvals with reliable and transparent loan assistance.',
-    icon: <BadgeIndianRupee size={30} />,
+    icon: <BadgeIndianRupee size={22} />,
   },
 ]
 
 const Stats = () => {
   return (
-    <section className='py-14 bg-gradient-to-b from-[#071739] via-[#0b1f52] to-cyan-700 text-white relative overflow-hidden'>
+    <section className='py-28 bg-gradient-to-b from-[#071739] via-[#0b1f52] to-cyan-700 text-white relative overflow-hidden'>
 
       {/* Background Blur */}
       <div className='absolute top-0 right-0 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl'></div>
 
       <div className='absolute bottom-0 left-0 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl'></div>
 
-      <div className='max-w-6xl mx-auto px-5 relative z-10'>
+      <div className='max-w-7xl mx-auto px-6 relative z-10'>
 
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className='text-center mb-10'
+          className='text-center mb-12'
         >
 
-          <span className='bg-white/10 border border-white/10 text-cyan-300 px-4 py-2 rounded-full text-sm font-medium'>
+          <span className='inline-flex items-center bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-2 rounded-full text-sm font-semibold text-cyan-300'>
             Company Services
           </span>
 
-          <h2 className='text-3xl md:text-4xl font-bold mt-5 leading-tight'>
-
+          <h2 className='text-3xl md:text-3xl font-extrabold text-white mt-6'>
             Trusted Financial
-            <span className='text-cyan-300'> Solutions</span>
-
+            <span className='text-cyan-400'> Solutions</span>
           </h2>
 
-          <p className='text-gray-300 mt-4 text-sm md:text-base max-w-2xl mx-auto leading-7'>
+          <p className='mt-5 text-base text-gray-200 leading-7 max-w-2xl mx-auto'>
             Union Capital Services provides reliable banking
             and loan support with quick processing and
             customer-friendly financial guidance.
@@ -75,7 +75,7 @@ const Stats = () => {
         </motion.div>
 
         {/* Cards */}
-        <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-5'>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-6'>
 
           {stats.map((item, index) => (
             <motion.div
@@ -86,26 +86,19 @@ const Stats = () => {
                 duration: 0.5,
                 delay: index * 0.1,
               }}
-              whileHover={{
-                y: -5,
-              }}
-              className='bg-white/10 backdrop-blur-lg border border-white/10 rounded-3xl p-6 text-center hover:border-cyan-300/30 transition duration-300'
+              whileHover={{ y: -4 }}
+              className='bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl p-6 text-center'
             >
 
-              {/* Icon */}
-              <div className='w-14 h-14 mx-auto rounded-2xl bg-cyan-400/20 text-cyan-300 flex items-center justify-center'>
-
+              <div className='w-12 h-12 mx-auto rounded-xl bg-cyan-400/20 text-cyan-400 flex items-center justify-center'>
                 {item.icon}
-
               </div>
 
-              {/* Title */}
-              <h3 className='mt-5 text-lg font-semibold'>
+              <h3 className='mt-4 text-base font-bold text-white'>
                 {item.title}
               </h3>
 
-              {/* Description */}
-              <p className='mt-3 text-gray-300 text-sm leading-6'>
+              <p className='mt-2 text-sm text-gray-200 leading-6'>
                 {item.description}
               </p>
 
@@ -119,25 +112,28 @@ const Stats = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className='mt-12 bg-white/10 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-10 text-center relative overflow-hidden'
+          className='mt-12 bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl p-8 text-center relative overflow-hidden'
         >
 
           <div className='absolute top-0 right-0 w-60 h-60 bg-cyan-400/10 rounded-full blur-3xl'></div>
 
           <div className='relative z-10'>
 
-            <h3 className='text-2xl md:text-3xl font-bold'>
+            <h3 className='text-2xl font-bold'>
               Empowering Financial Growth
             </h3>
 
-            <p className='mt-4 text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-7'>
+            <p className='mt-4 text-base text-gray-200 leading-7 max-w-2xl mx-auto'>
               Trusted banking partnerships and reliable
               financial solutions for personal and business growth.
             </p>
 
-            <button className='mt-6 bg-cyan-400 hover:bg-cyan-300 text-blue-950 px-7 py-3 rounded-xl font-semibold transition shadow-lg'>
+            <Link
+              to='/services'
+              className='inline-block mt-6 bg-cyan-400 hover:bg-cyan-300 text-blue-950 px-8 py-3 rounded-xl text-base font-semibold transition shadow-lg'
+            >
               Explore Services
-            </button>
+            </Link>
 
           </div>
 

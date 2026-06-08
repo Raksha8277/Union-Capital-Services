@@ -10,6 +10,7 @@ import {
 } from 'lucide-react'
 
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const loans = [
   {
@@ -78,14 +79,14 @@ const LoanSection = () => {
             Our Loan Services
           </span>
 
-          <h2 className='text-3xl md:text-4xl font-bold mt-5 leading-tight'>
+          <h2 className='text-3xl md:text-3xl font-extrabold leading-tight mt-6'>
 
             Financial Solutions
             <span className='text-cyan-300'> For Everyone</span>
 
           </h2>
 
-          <p className='mt-4 text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-7'>
+          <p className='mt-5 text-base text-gray-200 leading-7 max-w-xl mx-auto'>
             Trusted loan and banking solutions with
             faster approvals and reliable support.
           </p>
@@ -138,12 +139,12 @@ const LoanSection = () => {
               </div>
 
               {/* Title */}
-              <h3 className='text-xl font-semibold mt-5'>
+              <h3 className='text-2xl font-bold text-white mt-5 leading-tight'>
                 {loan.title}
               </h3>
 
               {/* Description */}
-              <p className='text-gray-300 text-sm leading-6 mt-3'>
+              <p className='text-gray-300 text-sm leading-7 mt-4'>
                 {loan.description}
               </p>
 
@@ -173,14 +174,17 @@ const LoanSection = () => {
             Need Financial Help?
           </h3>
 
-          <p className='mt-4 text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-7'>
+          <p className='mt-5 text-base text-gray-200 leading-7 max-w-xl mx-auto'>
             Our experts are ready to guide you with
             trusted banking and loan solutions.
           </p>
 
-          <button className='mt-6 bg-cyan-400 hover:bg-cyan-300 text-blue-950 px-7 py-3 rounded-2xl font-semibold transition duration-300 shadow-lg'>
-            Contact Our Team
-          </button>
+          <Link
+  to='/contact'
+  className='inline-block mt-6 bg-cyan-400 hover:bg-cyan-300 text-blue-950 px-7 py-3 rounded-2xl font-semibold transition duration-300 shadow-lg'
+>
+  Contact Our Team
+</Link>
 
         </motion.div>
 

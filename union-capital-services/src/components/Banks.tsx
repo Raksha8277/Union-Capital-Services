@@ -71,14 +71,14 @@ const Banks = () => {
             120+ Banking & NBFC Partners
           </span>
 
-          <h2 className='text-2xl md:text-3xl font-bold mt-4 leading-tight'>
+          <h2 className='text-xl md:text-3xl font-bold mt-4 leading-tight'>
 
             Trusted
             <span className='text-cyan-300'> Banking Partners</span>
 
           </h2>
 
-          <p className='text-gray-300 text-sm mt-3 max-w-xl mx-auto leading-6'>
+          <p className='text-gray-300 text-2sm mt-3 max-w-xl mx-auto leading-6'>
             Reliable loan and financial solutions through
             India’s leading banks and NBFC institutions.
           </p>

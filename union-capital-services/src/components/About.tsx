@@ -10,7 +10,7 @@ import {
 
 const About = () => {
   return (
-    <section className='relative min-h-screen py-40 bg-gradient-to-br from-[#071739] via-[#0b1f52] to-cyan-700 overflow-hidden flex items-center text-white'>
+    <section className='relative min-h-screen py-28 bg-gradient-to-br from-[#071739] via-[#0b1f52] to-cyan-700 overflow-hidden flex items-center text-white'>
 
       {/* Background Effects */}
       <div className='absolute top-0 right-0 w-[350px] h-[350px] bg-cyan-400/20 rounded-full blur-3xl'></div>
@@ -34,7 +34,7 @@ const About = () => {
           <img
             src='https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop'
             alt='Union Capital Services'
-            className='relative z-10 rounded-[30px] shadow-2xl border border-white/10 max-h-[75vh] object-cover'
+            className='relative z-10 rounded-[30px] shadow-2xl border border-white/10 max-h-[65vh] object-cover'
           />
 
         </motion.div>
@@ -47,12 +47,12 @@ const About = () => {
         >
 
           {/* Tag */}
-          <span className='bg-cyan-400/20 text-cyan-300 px-5 py-2 rounded-full font-semibold text-sm border border-cyan-400/20'>
+          <span className='inline-flex items-center bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-2 rounded-full text-sm font-semibold text-cyan-300'>
             About Union Capital Services
           </span>
 
           {/* Heading */}
-          <h2 className='text-4xl lg:text-5xl font-bold text-white mt-6 leading-tight'>
+          <h2 className='text-3xl md:text-3xl font-extrabold text-white mt-6 leading-tight'>
 
             Trusted Financial
             <span className='text-cyan-400'> Solutions </span>
@@ -61,14 +61,14 @@ const About = () => {
           </h2>
 
           {/* Description */}
-          <p className='text-gray-300 leading-7 mt-5 text-base'>
+          <p className='mt-5 text-base text-gray-200 leading-7'>
 
             Union Capital Services provides quick and transparent
             loan solutions for individuals, MSMEs, startups and businesses.
 
           </p>
 
-          <p className='text-gray-300 leading-7 mt-4 text-base'>
+          <p className='mt-4 text-base text-gray-200 leading-7'>
 
             We specialize in Home Loans, Business Loans,
             Vehicle Loans, Insurance and Project Finance
@@ -125,7 +125,7 @@ const About = () => {
 
             <motion.div
               whileHover={{ y: -4 }}
-              className='bg-white/10 backdrop-blur-lg border border-white/10 shadow-lg rounded-2xl p-4 flex gap-4'
+              className='bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl p-4 flex gap-4'
             >
 
               <div className='bg-white/10 w-12 h-12 rounded-xl flex items-center justify-center text-cyan-400 shrink-0'>
@@ -138,7 +138,7 @@ const About = () => {
                   Banking Network
                 </h3>
 
-                <p className='text-gray-300 mt-1 text-sm leading-6'>
+                <p className='text-gray-200 mt-1 text-sm leading-6'>
                   Trusted banks & NBFCs
                 </p>
 
@@ -148,7 +148,7 @@ const About = () => {
 
             <motion.div
               whileHover={{ y: -4 }}
-              className='bg-white/10 backdrop-blur-lg border border-white/10 shadow-lg rounded-2xl p-4 flex gap-4'
+              className='bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl p-4 flex gap-4'
             >
 
               <div className='bg-cyan-400/20 w-12 h-12 rounded-xl flex items-center justify-center text-cyan-400 shrink-0'>
@@ -161,7 +161,7 @@ const About = () => {
                   Customer Support
                 </h3>
 
-                <p className='text-gray-300 mt-1 text-sm leading-6'>
+                <p className='text-gray-200 mt-1 text-sm leading-6'>
                   Dedicated assistance
                 </p>
 
@@ -171,7 +171,7 @@ const About = () => {
 
             <motion.div
               whileHover={{ y: -4 }}
-              className='bg-white/10 backdrop-blur-lg border border-white/10 shadow-lg rounded-2xl p-4 flex gap-4'
+              className='bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl p-4 flex gap-4'
             >
 
               <div className='bg-white/10 w-12 h-12 rounded-xl flex items-center justify-center text-cyan-400 shrink-0'>
@@ -184,7 +184,7 @@ const About = () => {
                   MSME Finance
                 </h3>
 
-                <p className='text-gray-300 mt-1 text-sm leading-6'>
+                <p className='text-gray-200 mt-1 text-sm leading-6'>
                   Flexible funding solutions
                 </p>
 
@@ -194,7 +194,7 @@ const About = () => {
 
             <motion.div
               whileHover={{ y: -4 }}
-              className='bg-white/10 backdrop-blur-lg border border-white/10 shadow-lg rounded-2xl p-4 flex gap-4'
+              className='bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl p-4 flex gap-4'
             >
 
               <div className='bg-cyan-400/20 w-12 h-12 rounded-xl flex items-center justify-center text-cyan-400 shrink-0'>
@@ -207,7 +207,7 @@ const About = () => {
                   Trusted Process
                 </h3>
 
-                <p className='text-gray-300 mt-1 text-sm leading-6'>
+                <p className='text-gray-200 mt-1 text-sm leading-6'>
                   Secure financial services
                 </p>
 

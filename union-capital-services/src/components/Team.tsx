@@ -16,7 +16,6 @@ const team = [
     image:
       'https://cdn-icons-png.flaticon.com/512/2202/2202112.png',
   },
-
   {
     name: 'Sandesh Acharya',
     role: 'Branch Manager',
@@ -29,102 +28,91 @@ const team = [
 
 const Team = () => {
   return (
-    <section className='py-40 bg-gradient-to-b from-[#071739] via-[#0b1f52] to-cyan-700 relative overflow-hidden'>
+    <section className='py-28 bg-gradient-to-b from-[#071739] via-[#0b1f52] to-cyan-700 relative overflow-hidden'>
 
       {/* Background Blur */}
-      <div className='absolute top-0 left-0 w-52 h-52 bg-cyan-400/10 rounded-full blur-3xl'></div>
+      <div className='absolute top-0 left-0 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl'></div>
+      <div className='absolute bottom-0 right-0 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl'></div>
 
-      <div className='absolute bottom-0 right-0 w-60 h-60 bg-blue-400/10 rounded-full blur-3xl'></div>
-
-      <div className='max-w-4xl mx-auto px-4 relative z-10'>
+      <div className='max-w-7xl mx-auto px-6 relative z-10'>
 
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className='text-center mb-8'
+          transition={{ duration: 0.6 }}
+          className='text-center mb-12'
         >
-
-          <span className='bg-white/10 text-cyan-300 px-3 py-1.5 rounded-full text-xs font-medium border border-white/10'>
+          <span className='inline-flex items-center bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-2 rounded-full text-sm font-semibold text-cyan-300'>
             Union Capital Team
           </span>
 
-          <h2 className='text-2xl md:text-3xl font-bold text-white mt-4'>
-
+          <h2 className='text-3xl md:text-3xl font-extrabold text-white mt-6'>
             Meet Our
-            <span className='text-cyan-300'> Experts</span>
-
+            <span className='text-cyan-400'> Experts</span>
           </h2>
 
-          <p className='text-gray-300 mt-3 text-sm max-w-xl mx-auto leading-6'>
-            Trusted professionals providing financial
-            guidance and loan support.
+          <p className='mt-5 text-base text-gray-200 leading-7 max-w-2xl mx-auto'>
+            Trusted professionals providing financial guidance,
+            loan assistance, and reliable banking solutions.
           </p>
-
         </motion.div>
 
         {/* Features */}
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-3 mb-8'>
+        <div className='grid md:grid-cols-3 gap-4 mb-12'>
 
-          <div className='bg-white/10 backdrop-blur-md rounded-xl border border-white/10 p-3 flex items-center gap-3'>
-
-            <div className='bg-cyan-400/20 text-cyan-300 p-2 rounded-lg'>
-              <Users size={18} />
+          <div className='bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl p-4 flex gap-4'>
+            <div className='bg-cyan-400/20 w-12 h-12 rounded-xl flex items-center justify-center text-cyan-400 shrink-0'>
+              <Users size={22} />
             </div>
 
             <div>
-              <h3 className='text-white font-semibold text-xs'>
+              <h3 className='font-bold text-base text-white'>
                 Expert Team
               </h3>
 
-              <p className='text-gray-300 text-[11px] mt-1'>
+              <p className='text-gray-200 mt-1 text-sm leading-6'>
                 Experienced professionals
               </p>
             </div>
-
           </div>
 
-          <div className='bg-white/10 backdrop-blur-md rounded-xl border border-white/10 p-3 flex items-center gap-3'>
-
-            <div className='bg-cyan-400/20 text-cyan-300 p-2 rounded-lg'>
-              <BadgeCheck size={18} />
+          <div className='bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl p-4 flex gap-4'>
+            <div className='bg-cyan-400/20 w-12 h-12 rounded-xl flex items-center justify-center text-cyan-400 shrink-0'>
+              <BadgeCheck size={22} />
             </div>
 
             <div>
-              <h3 className='text-white font-semibold text-xs'>
+              <h3 className='font-bold text-base text-white'>
                 Trusted Support
               </h3>
 
-              <p className='text-gray-300 text-[11px] mt-1'>
+              <p className='text-gray-200 mt-1 text-sm leading-6'>
                 Transparent guidance
               </p>
             </div>
-
           </div>
 
-          <div className='bg-white/10 backdrop-blur-md rounded-xl border border-white/10 p-3 flex items-center gap-3'>
-
-            <div className='bg-cyan-400/20 text-cyan-300 p-2 rounded-lg'>
-              <Phone size={18} />
+          <div className='bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl p-4 flex gap-4'>
+            <div className='bg-cyan-400/20 w-12 h-12 rounded-xl flex items-center justify-center text-cyan-400 shrink-0'>
+              <Phone size={22} />
             </div>
 
             <div>
-              <h3 className='text-white font-semibold text-xs'>
+              <h3 className='font-bold text-base text-white'>
                 Quick Help
               </h3>
 
-              <p className='text-gray-300 text-[11px] mt-1'>
+              <p className='text-gray-200 mt-1 text-sm leading-6'>
                 Fast assistance
               </p>
             </div>
-
           </div>
 
         </div>
 
         {/* Team Cards */}
-        <div className='grid sm:grid-cols-2 gap-4'>
+        <div className='grid sm:grid-cols-2 gap-6'>
 
           {team.map((member, index) => (
             <motion.div
@@ -132,26 +120,24 @@ const Team = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.4,
+                duration: 0.5,
                 delay: index * 0.1,
               }}
-              whileHover={{ y: -3 }}
-              className='bg-white/10 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden'
+              whileHover={{ y: -4 }}
+              className='bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl overflow-hidden'
             >
 
               {/* Image */}
               <div className='bg-white/5 flex justify-center'>
-
                 <img
                   src={member.image}
                   alt={member.name}
-                  className='h-36 object-contain p-4'
+                  className='h-40 object-contain p-5'
                 />
-
               </div>
 
               {/* Content */}
-              <div className='p-4'>
+              <div className='px-6 py-4 pt-6'>
 
                 <h3 className='text-lg font-bold text-white text-center'>
                   {member.name}
@@ -161,39 +147,41 @@ const Team = () => {
                   {member.role}
                 </p>
 
-                <div className='w-10 h-1 bg-cyan-300 rounded-full mx-auto mt-2'></div>
+                <div className='w-10 h-1 bg-cyan-400 rounded-full mx-auto mt-2'></div>
 
                 {/* Contact */}
-                <div className='mt-4 space-y-2'>
+                <div className='mt-3 space-y-1'>
 
-                  <div className='flex items-center gap-2 text-gray-300 text-xs'>
-
-                    <Phone size={13} className='text-cyan-300' />
-
+                  <div className='flex items-center gap-2 text-gray-300 text-xs leading-4'>
+                    <Phone
+                      size={14}
+                      className='text-cyan-400 shrink-0'
+                    />
                     <span>{member.phone}</span>
-
                   </div>
 
-                  <div className='flex items-center gap-2 text-gray-300 text-xs break-all'>
-
-                    <Mail size={13} className='text-cyan-300' />
-
-                    <span>{member.email}</span>
-
+                  <div className='flex items-center gap-2 text-gray-300 text-xs leading-4'>
+                    <Mail
+                      size={14}
+                      className='text-cyan-400 shrink-0'
+                    />
+                    <span className='truncate'>
+                      {member.email}
+                    </span>
                   </div>
 
-                  <div className='flex items-center gap-2 text-gray-300 text-xs'>
-
-                    <MapPin size={13} className='text-cyan-300' />
-
+                  <div className='flex items-center gap-2 text-gray-300 text-xs leading-4'>
+                    <MapPin
+                      size={14}
+                      className='text-cyan-400 shrink-0'
+                    />
                     <span>Bangalore</span>
-
                   </div>
 
                 </div>
 
                 {/* Button */}
-                <button className='mt-4 w-full bg-cyan-400 hover:bg-cyan-300 text-blue-950 py-2 rounded-lg text-sm font-semibold transition'>
+                <button className='mt-4 w-full bg-cyan-400 hover:bg-cyan-300 text-blue-950 py-2.5 rounded-xl text-sm font-semibold transition'>
                   Contact
                 </button>
 
@@ -208,20 +196,20 @@ const Team = () => {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className='mt-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 p-6 text-center text-white'
+          transition={{ duration: 0.6 }}
+          className='mt-12 bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl p-8 text-center text-white'
         >
 
-          <h3 className='text-xl md:text-2xl font-bold'>
+          <h3 className='text-2xl font-bold'>
             Need Financial Support?
           </h3>
 
-          <p className='mt-3 text-gray-300 text-sm max-w-xl mx-auto leading-6'>
-            Connect with our experts for reliable
-            banking and loan solutions.
+          <p className='mt-4 text-base text-gray-200 leading-7 max-w-2xl mx-auto'>
+            Connect with our experts for reliable banking,
+            loan solutions, and professional financial guidance.
           </p>
 
-          <button className='mt-5 bg-cyan-400 hover:bg-cyan-300 text-blue-950 px-6 py-2.5 rounded-lg text-sm font-semibold transition'>
+          <button className='mt-6 bg-cyan-400 hover:bg-cyan-300 text-blue-950 px-8 py-3 rounded-xl text-base font-semibold transition'>
             Connect With Team
           </button>
 

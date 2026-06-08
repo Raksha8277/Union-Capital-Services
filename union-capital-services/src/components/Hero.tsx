@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 import {
   CheckCircle,
-  ArrowRight,
   BadgeCheck,
 } from 'lucide-react'
 
@@ -44,7 +44,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className='text-4xl md:text-6xl font-extrabold leading-tight mt-6'
+            className='text-3xl md:text-3xl font-extrabold leading-tight mt-6'
           >
 
             Fast &
@@ -114,48 +114,21 @@ const Hero = () => {
             className='mt-8 flex flex-wrap gap-4'
           >
 
-            <button className='group bg-cyan-400 hover:bg-cyan-300 transition text-blue-950 px-6 py-3 rounded-xl font-bold shadow-2xl flex items-center gap-2'>
+           <Link
+  to='/loans'
+  className='inline-block mt-6 bg-cyan-400 hover:bg-cyan-300 text-blue-950 px-7 py-3 rounded-2xl font-semibold transition duration-300 shadow-lg'
+>
+  View Loans
+</Link>
 
-              Apply Loan
-
-              <ArrowRight
-                size={18}
-                className='group-hover:translate-x-1 transition'
-              />
-
-            </button>
-
-            <button className='border border-white/20 hover:bg-white hover:text-blue-950 transition px-6 py-3 rounded-xl font-semibold backdrop-blur-lg'>
-              Explore Services
-            </button>
+            <Link
+  to='/services'
+  className='inline-block mt-6 bg-cyan-400 hover:bg-cyan-300 text-blue-950 px-7 py-3 rounded-2xl font-semibold transition duration-300 shadow-lg'
+>
+  Explore Services
+</Link>
 
           </motion.div>
-
-          {/* Contact Box */}
-          {/* <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-            className='flex items-center gap-4 mt-8 bg-white/10 backdrop-blur-lg border border-white/10 px-5 py-4 rounded-2xl max-w-sm'
-          >
-
-            <div className='bg-cyan-400 p-3 rounded-xl shadow-xl'>
-              <Phone className='text-blue-950' size={20} />
-            </div>
-
-            <div>
-
-              <p className='text-gray-300 text-sm'>
-                Call Us Anytime
-              </p>
-
-              <h3 className='text-xl font-bold mt-1'>
-                +91 91135 20317
-              </h3>
-
-            </div>
-
-          </motion.div> */}
 
         </div>
 
