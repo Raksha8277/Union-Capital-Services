@@ -11,7 +11,7 @@ import {
 const team = [
   {
     name: 'Abhijith Shetty',
-    role: 'Branch Manager',
+    role: 'Managing Partner',
     phone: '+91 99720 69920',
     email: 'abhijithshettyunion@gmail.com',
     image: 
@@ -19,7 +19,7 @@ const team = [
   },
   {
     name: 'Sandesh Acharya',
-    role: 'Branch Manager',
+    role: 'Managing Partner',
     phone: '+91 91135 20317',
     email: 'sandeshunion@gmail.com',
     image:
